@@ -1,9 +1,15 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import MainPage from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainPage />,
+  },
+]);
+
 const App = () => {
-  return (
-    <div className="h-screen flex justify-center items-center">
-      <h1 className="text-4xl font-semibold">Vite + ShadCn + TailwindCSS</h1>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
